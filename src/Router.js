@@ -7,7 +7,7 @@ const RouterComponent = () => {
     return (
         <Router>
             <Stack key="root">
-                <Scene key="home" component={Home} title="Hello world" />
+                <Scene key="home" component={Home} title="Hello SK" />
             </Stack>
         </Router>
     );
