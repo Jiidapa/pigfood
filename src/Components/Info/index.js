@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import { Container, Header, Content, Button } from 'native-base';
+import { View, Image } from 'react-native';
+import { Container, Header, Content, Button, Text } from 'native-base';
 import { Actions } from 'react-native-router-flux';
+const knowledge = require('../../../assets/img/knowledge/knowledge_header.png');
+
+
 class Info extends Component {
     linkToHome() {
         Actions.home();
     }
     render() {
         return (
-            <View>
-                <Text> Hello </Text>
-                <Button onPress={() => this.linkToHome()}>
-                    <Text>Click Me! </Text>
-                </Button>
-            </View>
+            <Container>                
+                    <Content>
+                        <Image style={{height:60, width:100, margin: 100}} source={knowledge} />
+                        <Text>
+                            This is Content Section
+                        </Text>
+                    </Content>               
+            </Container>
         );
     }
 }
