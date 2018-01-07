@@ -26,9 +26,9 @@ const RouterComponent = () => {
                 <Scene key="info" component={Info} title="ความรู้สุกร" />
                 <Scene key="about" component={About} title="เกี่ยวกับเรา" />
                 {/* farm management */}
-                <Scene key="addFarm" component={AddFarm} title="เพิ่มฟาร์ม" />
-                <Scene key="editFarm" component={EditFarm} title="แก้ไขฟาร์ม" />
-                <Scene key="farms" component={Farms} title="ฟาร์ม">
+                <Scene key="addFarm" component={AddFarm} title="เพิ่มฟาร์ม" hideNavBar />
+                <Scene key="editFarm" component={EditFarm} title="แก้ไขฟาร์ม"  />
+                <Scene key="farms" component={Farms} title="ฟาร์ม" hideNavBar>
                     {/* pigs management */}
                     <Scene key="addPig" component={AddPig} title="เพิ่มสุกร" />
                     <Scene key="editPig" component={EditPig} title="แก้ไขสุกร" />
