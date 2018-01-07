@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-class Farm extends Component {
+class AddPig extends Component {
     render() {
         return (
             <View>
-                <Text> Hello 555555 </Text>
+                <Text>AddPig</Text>
             </View>
         );
     }
 }
-export default Farm;
+export default AddPig;

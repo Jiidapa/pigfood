@@ -38,7 +38,7 @@ class Home extends Component {
                         <Text style={styles.kanit}>ความรู้สุกร</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={{ flex: 1 }} onPress={() => Actions.farm()}>
+                <TouchableOpacity style={{ flex: 1 }} onPress={() => Actions.farms()}>
                     <View style={[{ flex: 1 }, styles.box]}>
                         <Text style={styles.kanit}>ผสมอาหาร</Text>
                     </View>
