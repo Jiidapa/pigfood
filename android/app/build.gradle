@@ -138,6 +138,7 @@ android {
 
 dependencies {
     compile project(':react-native-vector-icons')
+    compile project(':react-native-image-picker')
     // This should be here already
     compile(project(':react-native-firebase')) {
         transitive = false
