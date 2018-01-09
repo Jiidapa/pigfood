@@ -49,7 +49,7 @@ class Home extends Component {
                             <Text style={styles.kanit}>วิธีใช้</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ flex: 1 }}>
+                    <TouchableOpacity style={{ flex: 1 }} onPress={() => Actions.aboutme()}>
                         <View style={[{ flex: 1 }, styles.box]}>
                             <Text style={styles.kanit}>เกี่ยวกับเรา</Text>
                         </View>
