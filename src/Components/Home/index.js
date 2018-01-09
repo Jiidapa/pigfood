@@ -36,7 +36,7 @@ class Home extends Component {
                         </View>
                         <View style={{ position: 'absolute' }}>
                         <Text style={[styles.textPrimary, { fontSize: 26 }]}>Food{' '}
-                            <Text style={{ color: '#00B0FF', fontSize: 26}}>Mixer</Text>{' '}
+                            <Text style={{ color: 'orange', fontSize: 26}}>Mixer</Text>{' '}
                             Machine
                         </Text>
                         <Text style={[styles.textPrimary, { fontSize: 14 }]}>เครื่องผสมอาหารสุกรอัตโนมัติ</Text>
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
         borderColor: '#ddd'
     },
     boxPrimary: {
-        backgroundColor: '#00B0FF',
+        backgroundColor: '#795548',
     },
     centered: {
         justifyContent: 'center',
@@ -108,7 +108,8 @@ const styles = StyleSheet.create({
         fontSize: 40
     },
     textPrimary: {
-        color: 'white'
+        color: 'white',
+        backgroundColor: 'transparent'
     },
     kanit: {
         fontFamily: 'Kanit-Regular'
