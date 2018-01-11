@@ -21,24 +21,22 @@ import EditFood from './Components/Foods/edit';
 const RouterComponent = () => {
     return (
         <Router navigationBarStyle={{ backgroundColor: '#1E88E5' }} titleStyle={{ fontFamily: 'Kanit-Light', color: 'white' }}>
-            <Stack key="root">
-                <Scene key="home" component={Home} title="เครื่องผสมอาหารสุกร" init hideNavBar />
-                <Scene key="info" component={Info} title="ความรู้สุกร" hideNavBar />
-                <Scene key="about" component={AboutMe} title="เกี่ยวกับเรา" hideNavBar />
+            <Stack key="root" hideNavBar>
+                <Scene key="home" component={Home} title="เครื่องผสมอาหารสุกร" init />
+                <Scene key="info" component={Info} title="ความรู้สุกร" />
+                <Scene key="about" component={AboutMe} title="เกี่ยวกับเรา" />
                 {/* farm management */}
-                <Scene key="addFarm" component={AddFarm} title="เพิ่มฟาร์ม" hideNavBar />
+                <Scene key="addFarm" component={AddFarm} title="เพิ่มฟาร์ม" />
                 <Scene key="editFarm" component={EditFarm} title="แก้ไขฟาร์ม" />
-                <Scene key="farms" component={Farms} title="ฟาร์ม" hideNavBar>
-                    {/* pigs management */}
-                    <Scene key="addPig" component={AddPig} title="เพิ่มสุกร" />
-                    <Scene key="editPig" component={EditPig} title="แก้ไขสุกร" />
-                    <Scene key="Pigs" component={Pigs} title="สุกร">
-                        {/* foods management */}
-                        <Scene key="Foods" component={Foods} title="สูตรอาหาร" />
-                        <Scene key="addFood" component={AddFood} title="เพิ่มสูตรอาหาร" />
-                        <Scene key="editFood" component={EditFood} title="แก้ไขสูตรอาหาร" />
-                    </Scene>
-                </Scene>
+                <Scene key="farms" component={Farms} title="ฟาร์ม" />
+                {/* pigs management */}
+                <Scene key="addPig" component={AddPig} title="เพิ่มสุกร" />
+                <Scene key="editPig" component={EditPig} title="แก้ไขสุกร" />
+                <Scene key="pigs" component={Pigs} title="สุกร" />
+                {/* foods management */}
+                <Scene key="Foods" component={Foods} title="สูตรอาหาร" />
+                <Scene key="addFood" component={AddFood} title="เพิ่มสูตรอาหาร" />
+                <Scene key="editFood" component={EditFood} title="แก้ไขสูตรอาหาร" />
             </Stack>
         </Router>
     );

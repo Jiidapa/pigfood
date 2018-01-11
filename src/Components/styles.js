@@ -1,6 +1,28 @@
 import { StyleSheet } from 'react-native';
-
+// ชื่อ style ต้องเรียงจาก a-z
 const styles = StyleSheet.create({
+    box: {
+        borderBottomWidth: 0.5,
+        borderColor: '#ddd',
+        padding: 8
+    },
+    boxCol: {
+        backgroundColor: '#fff', 
+        borderRightWidth: 0.5, 
+        borderColor: '#ddd',
+        height: 200,
+    },
+    boxPrimary: {
+        backgroundColor: '#795548',
+    },
+    caption: {
+        color: '#0288D1',
+        marginTop: 8
+    },
+    centered: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     header: {
         height: 150,
         width: null,
@@ -12,24 +34,19 @@ const styles = StyleSheet.create({
         backgroundColor: '#000',
         opacity: 0.6
     },
-    box: {
-        padding: 8,
-        borderBottomWidth: 0.5,
-        borderColor: '#ddd'
-    },
-    boxPrimary: {
-        backgroundColor: '#795548',
-    },
-    centered: {
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
     icon: {
+        fontSize: 20,
+        color: 'white'
+    },
+    iconBox: {
         fontSize: 40
     },
     iconButton: {
         fontSize: 24,
         color: 'white'
+    },
+    kanit: {
+        fontFamily: 'Kanit-Regular'
     },
     row: {
         padding: 8
@@ -46,9 +63,6 @@ const styles = StyleSheet.create({
     },
     textLarge: {
         fontSize: 24
-    },
-    kanit: {
-        fontFamily: 'Kanit-Regular'
     }
 });
 

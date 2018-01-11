@@ -25,30 +25,30 @@ class Home extends Component {
                 </View>
                 <View style={{ backgroundColor: '#fff', flexDirection: 'row' }}>
                     <Grid>
-                        <Col style={{ backgroundColor: '#fff', height: 200, borderRightWidth: 0.5, borderColor: '#ddd' }}>
+                        <Col style={styles.boxCol}>
                             <Row style={[styles.box, styles.centered, styles.boxPrimary]}>
                                 <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => Actions.farms()}>
-                                    <FontAwesome name="android" style={[styles.icon, styles.textPrimary]} />
+                                    <FontAwesome name="android" style={[styles.iconBox, styles.textPrimary]} />
                                     <Text style={[styles.textPrimary, styles.kanit]}>ผสมอาหาร</Text>
                                 </TouchableOpacity>
                             </Row>
                             <Row style={[styles.box, styles.centered]}>
                                 <TouchableOpacity style={{ alignItems: 'center' }}>
-                                    <FontAwesome name="info-circle" style={[styles.icon]} />
+                                    <FontAwesome name="info-circle" style={[styles.iconBox]} />
                                     <Text>วิธีใช้</Text>
                                 </TouchableOpacity>
                             </Row>
                         </Col>
-                        <Col style={{ backgroundColor: '#fff', height: 200, borderRightWidth: 0.5, borderColor: '#ddd' }}>
+                        <Col style={styles.boxCol}>
                             <Row style={[styles.box, styles.centered]}>
                                 <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => Actions.info()}>
-                                    <FontAwesome name="book" style={[styles.icon]} />
+                                    <FontAwesome name="book" style={[styles.iconBox]} />
                                     <Text>ความรู้เรื่องสุกร</Text>
                                 </TouchableOpacity>
                             </Row>
                             <Row style={[styles.box, styles.centered]}>
                                 <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => Actions.about()}>
-                                    <FontAwesome name="question-circle" style={[styles.icon]} />
+                                    <FontAwesome name="question-circle" style={[styles.iconBox]} />
                                     <Text>เกี่ยวกับเรา</Text>
                                 </TouchableOpacity>
                             </Row>
