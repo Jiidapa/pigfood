@@ -1,28 +1,11 @@
 import React, { Component } from 'react';
-import { View, Image, ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import {
-    Container,
-    Content,
-    Button,
-    Header,
-    Text,
-    Left,
-    Icon,
-    Right,
-    Body,
-    Title,
-    Card,
-    CardItem
-} from 'native-base';
-import { Col, Row, Grid } from "react-native-easy-grid";
+import { Container, Text } from 'native-base';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 import { Actions } from 'react-native-router-flux';
 
-const bg_menu = require('../../../assets/img/menu/menu1_01.png');
-const bg_menu_1 = require('../../../assets/img/menu/menu1_02.png');
-const bg_menu_2 = require('../../../assets/img/menu/menu1_03.png');
-const bg_menu_3 = require('../../../assets/img/menu/menu1_04.png');
-const bg_menu_4 = require('../../../assets/img/menu/menu1_05.png');
+const BGMenu = require('../../../assets/img/menu/menu1_02.png');
 
 class Home extends Component {
 
@@ -30,23 +13,14 @@ class Home extends Component {
         return (
             <Container>
                 <View style={{ flex: 1 }}>
-                    <ImageBackground source={bg_menu_1} style={[styles.header, styles.centered]}>
-                        <View style={[styles.centered, styles.headerView]}>
-                            
-                        </View>
-<<<<<<< HEAD
-                    </TouchableOpacity>
-                    <TouchableOpacity style={{ flex: 1 }} onPress={() => Actions.aboutme()}>
-                        <View style={[{ flex: 1 }, styles.box]}>
-                            <Text style={styles.kanit}>เกี่ยวกับเรา</Text>
-=======
+                    <ImageBackground source={BGMenu} style={[styles.header, styles.centered]}>
+                        <View style={[styles.centered, styles.headerView]} />
                         <View style={{ position: 'absolute' }}>
                         <Text style={[styles.textPrimary, { fontSize: 26 }]}>Food{' '}
-                            <Text style={{ color: 'orange', fontSize: 26}}>Mixer</Text>{' '}
+                            <Text style={{ color: 'orange', fontSize: 26 }}>Mixer</Text>{' '}
                             Machine
                         </Text>
                         <Text style={[styles.textPrimary, { fontSize: 14 }]}>เครื่องผสมอาหารสุกรอัตโนมัติ</Text>
->>>>>>> 1995de01dde9cf5ac0aaec57cfc86d9f6ae2afbb
                         </View>
                     </ImageBackground>
                 </View>
@@ -55,13 +29,13 @@ class Home extends Component {
                         <Col style={{ backgroundColor: '#fff', height: 200, borderRightWidth: 0.5, borderColor: '#ddd' }}>
                             <Row style={[styles.box, styles.centered, styles.boxPrimary]}>
                                 <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => Actions.farms()}>
-                                    <FontAwesome name="android" style={[styles.icon, styles.textPrimary]}></FontAwesome>
+                                    <FontAwesome name="android" style={[styles.icon, styles.textPrimary]} />
                                     <Text style={[styles.textPrimary, styles.kanit]}>ผสมอาหาร</Text>
                                 </TouchableOpacity>
                             </Row>
                             <Row style={[styles.box, styles.centered]}>
                                 <TouchableOpacity style={{ alignItems: 'center' }}>
-                                    <FontAwesome name="info-circle" style={[styles.icon]}></FontAwesome>
+                                    <FontAwesome name="info-circle" style={[styles.icon]} />
                                     <Text>วิธีใช้</Text>
                                 </TouchableOpacity>
                             </Row>
@@ -69,13 +43,13 @@ class Home extends Component {
                         <Col style={{ backgroundColor: '#fff', height: 200, borderRightWidth: 0.5, borderColor: '#ddd' }}>
                             <Row style={[styles.box, styles.centered]}>
                                 <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => Actions.info()}>
-                                    <FontAwesome name="book" style={[styles.icon]}></FontAwesome>
+                                    <FontAwesome name="book" style={[styles.icon]} />
                                     <Text>ความรู้เรื่องสุกร</Text>
                                 </TouchableOpacity>
                             </Row>
                             <Row style={[styles.box, styles.centered]}>
-                                <TouchableOpacity style={{ alignItems: 'center' }}>
-                                    <FontAwesome name="question-circle" style={[styles.icon]}></FontAwesome>
+                                <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => Actions.about()}>
+                                    <FontAwesome name="question-circle" style={[styles.icon]} />
                                     <Text>เกี่ยวกับเรา</Text>
                                 </TouchableOpacity>
                             </Row>
