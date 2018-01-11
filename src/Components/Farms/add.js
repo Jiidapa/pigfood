@@ -19,6 +19,7 @@ const BGMenu = require('../../../assets/img/menu/menu1_04.png');
 const ImgUpload = require('../../../assets/img/icons/uploadbtn.png');
 var ImagePicker = require('react-native-image-picker');
 
+<<<<<<< HEAD
 class addFarms extends Component {
     componentWillMount(){
         this.setState({
@@ -26,6 +27,9 @@ class addFarms extends Component {
             farmName: ''
         });
     }
+=======
+class AddFarms extends Component {
+>>>>>>> 5b15b846057b8f4b8416332445866a7aeda2052b
     render() {
         return (
             <Container>
@@ -79,6 +83,7 @@ class addFarms extends Component {
                 // You can also display the image using data:
                 // let source = { uri: 'data:image/jpeg;base64,' + response.data };
 
+<<<<<<< HEAD
                 this.setState({
                     img: source
                 });
@@ -88,3 +93,6 @@ class addFarms extends Component {
 }
 
 export default addFarms;
+=======
+export default AddFarms;
+>>>>>>> 5b15b846057b8f4b8416332445866a7aeda2052b
