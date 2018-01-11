@@ -34,19 +34,12 @@ class Home extends Component {
                         <View style={[styles.centered, styles.headerView]}>
                             
                         </View>
-<<<<<<< HEAD
-                    </TouchableOpacity>
-                    <TouchableOpacity style={{ flex: 1 }} onPress={() => Actions.aboutme()}>
-                        <View style={[{ flex: 1 }, styles.box]}>
-                            <Text style={styles.kanit}>เกี่ยวกับเรา</Text>
-=======
                         <View style={{ position: 'absolute' }}>
                         <Text style={[styles.textPrimary, { fontSize: 26 }]}>Food{' '}
                             <Text style={{ color: 'orange', fontSize: 26}}>Mixer</Text>{' '}
                             Machine
                         </Text>
                         <Text style={[styles.textPrimary, { fontSize: 14 }]}>เครื่องผสมอาหารสุกรอัตโนมัติ</Text>
->>>>>>> 1995de01dde9cf5ac0aaec57cfc86d9f6ae2afbb
                         </View>
                     </ImageBackground>
                 </View>

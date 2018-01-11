@@ -4,10 +4,7 @@ import { Scene, Router, Stack } from 'react-native-router-flux';
 
 import Home from './Components/Home';
 import Info from './Components/Info';
-<<<<<<< HEAD
-import Farm from './Components/Farm';
 import AboutMe from './Components/AboutMe';
-=======
 import About from './Components/About';
 // farms management
 import Farms from './Components/Farms';
@@ -21,7 +18,6 @@ import EditPig from './Components/Pigs/edit';
 import Foods from './Components/Foods';
 import AddFood from './Components/Foods/add';
 import EditFood from './Components/Foods/edit';
->>>>>>> 1995de01dde9cf5ac0aaec57cfc86d9f6ae2afbb
 
 const RouterComponent = () => {
     return (
@@ -29,10 +25,8 @@ const RouterComponent = () => {
             <Stack key="root">
                 <Scene key="home" component={Home} title="เครื่องผสมอาหารสุกร" init hideNavBar />
                 <Scene key="info" component={Info} title="ความรู้สุกร" />
-<<<<<<< HEAD
-                <Scene key="farm" component={Farm} title="ฟาร์ม" />
+                <Scene key="farm" component={Farms} title="ฟาร์ม" />
                 <Scene key="aboutme" component={AboutMe} title="เกี่ยวกับเรา" />
-=======
                 <Scene key="about" component={About} title="เกี่ยวกับเรา" />
                 {/* farm management */}
                 <Scene key="addFarm" component={AddFarm} title="เพิ่มฟาร์ม" hideNavBar />
@@ -48,7 +42,6 @@ const RouterComponent = () => {
                         <Scene key="editFood" component={EditFood} title="แก้ไขสูตรอาหาร" />
                     </Scene>
                 </Scene>
->>>>>>> 1995de01dde9cf5ac0aaec57cfc86d9f6ae2afbb
             </Stack>
         </Router>
     );
