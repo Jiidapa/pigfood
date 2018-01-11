@@ -17,9 +17,38 @@ import styles from '../styles';
 
 const BGMenu = require('../../../assets/img/menu/menu1_04.png');
 const ImgUpload = require('../../../assets/img/icons/uploadbtn.png');
-var ImagePicker = require('react-native-image-picker');
+let ImagePicker = require('react-native-image-picker');
 
-class AddFarms extends Component {
+class AddFarm extends Component {
+    componentWillMount() {
+        this.setState({
+            img: ImgUpload,
+            farmName: ''
+        });
+    }
+
+    show() {
+        ImagePicker.showImagePicker((response) => {
+            console.log('Response = ', response);
+
+            if (response.didCancel) {
+                console.log('User cancelled image picker');
+            } else if (response.error) {
+                console.log('ImagePicker Error: ', response.error);
+            } else if (response.customButton) {
+                console.log('User tapped custom button: ', response.customButton);
+            } else {
+                const source = { uri: response.uri };
+
+                // You can also display the image using data:
+                // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+                this.setState({
+                    img: source
+                });
+            }
+        });
+    }
+
     render() {
         return (
             <Container>
@@ -36,7 +65,7 @@ class AddFarms extends Component {
                         <Form>
                             <Item floatingLabel>
                                 <Label>ชื่อฟาร์ม {this.state.farmName}</Label>
-                                <Input onChangeText={(text) => this.setState({farmName: text})} value={this.state.farmName} />
+                                <Input onChangeText={(text) => this.setState({ farmName: text })} value={this.state.farmName} />
                             </Item>
                         </Form>
                         <View style={[styles.row, { alignItems: 'center', marginTop: 8 }]}>
@@ -54,23 +83,6 @@ class AddFarms extends Component {
             </Container>
         );
     }
-    show() {
-        ImagePicker.showImagePicker((response) => {
-            console.log('Response = ', response);
+}
 
-            if (response.didCancel) {
-                console.log('User cancelled image picker');
-            }
-            else if (response.error) {
-                console.log('ImagePicker Error: ', response.error);
-            }
-            else if (response.customButton) {
-                console.log('User tapped custom button: ', response.customButton);
-            }
-            else {
-                let source = { uri: response.uri };
-
-                // You can also display the image using data:
-                // let source = { uri: 'data:image/jpeg;base64,' + response.data };
-
-export default AddFarms;
+export default AddFarm;
