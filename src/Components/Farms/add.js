@@ -17,8 +17,38 @@ import styles from '../styles';
 
 const BGMenu = require('../../../assets/img/menu/menu1_04.png');
 const ImgUpload = require('../../../assets/img/icons/uploadbtn.png');
+let ImagePicker = require('react-native-image-picker');
 
 class AddFarm extends Component {
+    componentWillMount() {
+        this.setState({
+            img: ImgUpload,
+            farmName: ''
+        });
+    }
+
+    show() {
+        ImagePicker.showImagePicker((response) => {
+            console.log('Response = ', response);
+
+            if (response.didCancel) {
+                console.log('User cancelled image picker');
+            } else if (response.error) {
+                console.log('ImagePicker Error: ', response.error);
+            } else if (response.customButton) {
+                console.log('User tapped custom button: ', response.customButton);
+            } else {
+                const source = { uri: response.uri };
+
+                // You can also display the image using data:
+                // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+                this.setState({
+                    img: source
+                });
+            }
+        });
+    }
+
     render() {
         return (
             <Container>
@@ -34,13 +64,15 @@ class AddFarm extends Component {
                     <View style={[styles.row, { flex: 1, backgroundColor: '#fff' }]}>
                         <Form>
                             <Item floatingLabel>
-                                <Label>ชื่อฟาร์ม</Label>
-                                <Input />
+                                <Label>ชื่อฟาร์ม {this.state.farmName}</Label>
+                                <Input onChangeText={(text) => this.setState({ farmName: text })} value={this.state.farmName} />
                             </Item>
                         </Form>
                         <View style={[styles.row, { alignItems: 'center', marginTop: 8 }]}>
                             <Text style={styles.textMedium}>รูปฟาร์ม</Text>
-                            <Image source={ImgUpload} style={{ marginTop: 32, width: 170, height: 170 }} />
+                            <TouchableOpacity onPress={() => this.show()}>
+                                <Image source={this.state.img} style={{ marginTop: 32, width: 140, height: 140 }} />
+                            </TouchableOpacity>
                         </View>
                     </View>
                     <Button style={{ borderRadius: 0 }} block warning>
@@ -51,23 +83,6 @@ class AddFarm extends Component {
             </Container>
         );
     }
-    show() {
-        ImagePicker.showImagePicker(options, (response) => {
-            console.log('Response = ', response);
-
-            if (response.didCancel) {
-                console.log('User cancelled image picker');
-            }
-            else if (response.error) {
-                console.log('ImagePicker Error: ', response.error);
-            }
-            else if (response.customButton) {
-                console.log('User tapped custom button: ', response.customButton);
-            }
-            else {
-                let source = { uri: response.uri };
-
-                // You can also display the image using data:
-                // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+}
 
 export default AddFarm;
