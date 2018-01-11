@@ -18,7 +18,7 @@ import styles from '../styles';
 const BGMenu = require('../../../assets/img/menu/menu1_04.png');
 const ImgUpload = require('../../../assets/img/icons/uploadbtn.png');
 
-class Farms extends Component {
+class AddFarms extends Component {
     render() {
         return (
             <Container>
@@ -53,4 +53,4 @@ class Farms extends Component {
     }
 }
 
-export default Farms;
+export default AddFarms;
