@@ -4,6 +4,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Container, Text } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { Actions } from 'react-native-router-flux';
+import { Cover } from '../common';
+import styles from '../styles';
 
 const BGMenu = require('../../../assets/img/menu/menu1_02.png');
 
@@ -13,16 +15,13 @@ class Home extends Component {
         return (
             <Container>
                 <View style={{ flex: 1 }}>
-                    <ImageBackground source={BGMenu} style={[styles.header, styles.centered]}>
-                        <View style={[styles.centered, styles.headerView]} />
-                        <View style={{ position: 'absolute' }}>
+                    <Cover bgsource={BGMenu}>
                         <Text style={[styles.textPrimary, { fontSize: 26 }]}>Food{' '}
-                            <Text style={{ color: 'orange', fontSize: 26 }}>Mixer</Text>{' '}
-                            Machine
+                        <Text style={{ color: 'orange', fontSize: 26 }}>Mixer</Text>{' '}
+                                Machine
                         </Text>
                         <Text style={[styles.textPrimary, { fontSize: 14 }]}>เครื่องผสมอาหารสุกรอัตโนมัติ</Text>
-                        </View>
-                    </ImageBackground>
+                    </Cover>
                 </View>
                 <View style={{ backgroundColor: '#fff', flexDirection: 'row' }}>
                     <Grid>
@@ -61,39 +60,4 @@ class Home extends Component {
     }
 }
 
-const styles = StyleSheet.create({
-    header: {
-        height: 150,
-        width: null,
-        flexDirection: 'row'
-    },
-    headerView: {
-        height: 75,
-        flex: 1,
-        backgroundColor: '#000',
-        opacity: 0.6
-    },
-    box: {
-        padding: 8,
-        borderBottomWidth: 0.5,
-        borderColor: '#ddd'
-    },
-    boxPrimary: {
-        backgroundColor: '#795548',
-    },
-    centered: {
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    icon: {
-        fontSize: 40
-    },
-    textPrimary: {
-        color: 'white',
-        backgroundColor: 'transparent'
-    },
-    kanit: {
-        fontFamily: 'Kanit-Regular'
-    }
-});
 export default Home;

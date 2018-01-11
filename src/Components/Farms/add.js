@@ -1,47 +1,51 @@
 import React, { Component } from 'react';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import FontAwesome, { Button } from 'react-native-vector-icons/FontAwesome';
-import { Col, Row, Grid } from "react-native-easy-grid";
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Actions } from 'react-native-router-flux';
+import { MyHeader, Cover } from '../common';
 import {
     Container,
-    Header,
     Text,
-    Body,
-    Left,
     Content,
     Form,
     Item,
     Input,
-    Label
+    Label,
+    Button
 } from 'native-base';
+import styles from '../styles';
+
+const BGMenu = require('../../../assets/img/menu/menu1_04.png');
+const ImgUpload = require('../../../assets/img/icons/uploadbtn.png');
+
 class Farms extends Component {
     render() {
         return (
             <Container>
-                <Header style={[styles.header]}>
-                    <Left>
-                        <TouchableOpacity onPress={() => Actions.pop()}>
-                            <FontAwesome name="arrow-left" style={[styles.icon]}></FontAwesome>
-                        </TouchableOpacity>
-                    </Left>
-                    <Body>
-                        <Text style={[styles.kanit, { color: 'white', textAlign: 'center' }]}>เพิ่มฟาร์ม</Text>
-                    </Body>
-                </Header>
-                <Content>
-                    <Form>
-                        <Item floatingLabel>
-                            <Label>ชื่อฟาร์ม</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel last>
-                            <Label>เพิ่มรูปฟาร์ม</Label>
-                            <Input />
-                        </Item>
-                    </Form>
-                    <Button rounded success>
-                        <Text> บันทึก </Text>
+                <MyHeader title='เพิ่มฟาร์ม' />
+                <Cover bgsource={BGMenu}>
+                    <Text style={[styles.textPrimary, { fontSize: 26 }]}>Food{' '}
+                        <Text style={{ color: 'orange', fontSize: 26 }}>Mixer</Text>{' '}
+                        Machine
+                        </Text>
+                    <Text style={[styles.textPrimary, { fontSize: 14 }]}>เพิ่มข้อมูลฟาร์มของท่าน</Text>
+                </Cover>
+                <Content contentContainerStyle={{ flex: 1 }}>
+                    <View style={[styles.row, { flex: 1, backgroundColor: '#fff' }]}>
+                        <Form>
+                            <Item floatingLabel>
+                                <Label>ชื่อฟาร์ม</Label>
+                                <Input />
+                            </Item>
+                        </Form>
+                        <View style={[styles.row, { alignItems: 'center', marginTop: 8 }]}>
+                            <Text style={styles.textMedium}>รูปฟาร์ม</Text>
+                            <Image source={ImgUpload} style={{ marginTop: 32, width: 170, height: 170 }} />
+                        </View>
+                    </View>
+                    <Button style={{ borderRadius: 0 }} block warning>
+                        <FontAwesome style={styles.iconButton} name='floppy-o' />
+                        <Text>บันทึก</Text>
                     </Button>
                 </Content>
             </Container>
@@ -49,16 +53,4 @@ class Farms extends Component {
     }
 }
 
-const styles = StyleSheet.create({
-    header: {
-        backgroundColor: '#795548',
-    },
-    icon: {
-        fontSize: 20,
-        color: 'white'
-    },
-    kanit: {
-        fontFamily: 'Kanit-Regular'
-    }
-});
 export default Farms;
