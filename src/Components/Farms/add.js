@@ -18,7 +18,7 @@ import styles from '../styles';
 const BGMenu = require('../../../assets/img/menu/menu1_04.png');
 const ImgUpload = require('../../../assets/img/icons/uploadbtn.png');
 
-class AddFarms extends Component {
+class AddFarm extends Component {
     render() {
         return (
             <Container>
@@ -70,4 +70,4 @@ class AddFarms extends Component {
                 // You can also display the image using data:
                 // let source = { uri: 'data:image/jpeg;base64,' + response.data };
 
-export default AddFarms;
+export default AddFarm;
