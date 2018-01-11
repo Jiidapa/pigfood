@@ -4,7 +4,7 @@ import { Scene, Router, Stack } from 'react-native-router-flux';
 
 import Home from './Components/Home';
 import Info from './Components/Info';
-import AboutMe from './Components/AboutMe';
+import About from './Components/About';
 // farms management
 import Farms from './Components/Farms';
 import AddFarm from './Components/Farms/add';
@@ -24,7 +24,7 @@ const RouterComponent = () => {
             <Stack key="root" hideNavBar>
                 <Scene key="home" component={Home} title="เครื่องผสมอาหารสุกร" init />
                 <Scene key="info" component={Info} title="ความรู้สุกร" />
-                <Scene key="about" component={AboutMe} title="เกี่ยวกับเรา" />
+                <Scene key="about" component={About} title="เกี่ยวกับเรา" />
                 {/* farm management */}
                 <Scene key="addFarm" component={AddFarm} title="เพิ่มฟาร์ม" />
                 <Scene key="editFarm" component={EditFarm} title="แก้ไขฟาร์ม" />

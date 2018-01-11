@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { Actions } from 'react-native-router-flux';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { Container } from 'native-base';
+import { MyHeader } from '../common';
+import styles from '../styles';
 
 class Pigs extends Component {
+
     render() {
         return (
-            <View>
-                <Text>Pigs</Text>
-            </View>
+            <Container>
+                <MyHeader title='แสดงรายการหมู'>
+                    <TouchableOpacity onPress={() => Actions.addPig()}>
+                        <FontAwesome name="plus-circle" style={[styles.icon]} />
+                    </TouchableOpacity>
+                </MyHeader>
+            </Container>
         );
     }
 }
