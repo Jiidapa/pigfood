@@ -32,7 +32,7 @@
 		2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E901DF850E9000B6D8A /* libRCTSettings-tvOS.a */; };
 		2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */; };
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
-		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* pigfoodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* pigfoodTests.m */; };
 		36BD57BFAB5040ADA7D881FD /* Kanit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7AB584614A4F15BFE914BA /* Kanit-Medium.ttf */; };
 		4DF9596D2BB54D0FA52EB1D1 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B63E2A084BE44F29E47C02A /* MaterialCommunityIcons.ttf */; };
@@ -43,7 +43,7 @@
 		6CD6A0D896BA418E8C0C6456 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B9A5F70B00B4B1093470745 /* Octicons.ttf */; };
 		7EBCEB3140D44BD5B937366F /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 755228385AE34BD09DE6E93D /* Roboto.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		84219AEB2004B2820009AB3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84219ABA2004B2820009AB3D /* GoogleService-Info.plist */; };
+		84EDB5662009F5A8007E7420 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84EDB5652009F5A7007E7420 /* GoogleService-Info.plist */; };
 		8FE1298B075DEB675190CD68 /* libPods-pigfood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD2E16AF6C93F6883D766B5 /* libPods-pigfood.a */; };
 		917C17637DB44A709DDC80FA /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50D2FAACB45C4B3B894399A2 /* Roboto_medium.ttf */; };
 		9206E537CB5F4F0BBB406A90 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8D3F985C634E5DA861CBA2 /* SimpleLineIcons.ttf */; };
@@ -130,6 +130,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "pigfood-tvOS";
+		};
+		2D16E6711FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ADD01A681E09402E00F6D226;
+			remoteInfo = "RCTBlob-tvOS";
+		};
+		2D16E6831FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DBE0D001F3B181A0099AA32;
+			remoteInfo = fishhook;
+		};
+		2D16E6851FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DBE0D0D1F3B181C0099AA32;
+			remoteInfo = "fishhook-tvOS";
 		};
 		3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -386,7 +407,7 @@
 		7A0DEBDE9EEF5EBF0A7001F8 /* Pods-pigfood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pigfood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pigfood/Pods-pigfood.debug.xcconfig"; sourceTree = "<group>"; };
 		7FD2E16AF6C93F6883D766B5 /* libPods-pigfood.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pigfood.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		84219ABA2004B2820009AB3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84EDB5652009F5A7007E7420 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "pigfood/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9B95B3862506471FA6225C6D /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		9FB4CD487C8084298042B8F9 /* libPods-pigfoodTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pigfoodTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E3BD08713D4AADB31A52FA /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
@@ -555,8 +576,8 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				84EDB5652009F5A7007E7420 /* GoogleService-Info.plist */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				84219ABA2004B2820009AB3D /* GoogleService-Info.plist */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -568,7 +589,6 @@
 			isa = PBXGroup;
 			children = (
 				146834041AC3E56700842450 /* libReact.a */,
-				3DAD3EA31DF850E9000B6D8A /* libReact.a */,
 				3DAD3EA51DF850E9000B6D8A /* libyoga.a */,
 				3DAD3EA71DF850E9000B6D8A /* libyoga.a */,
 				3DAD3EA91DF850E9000B6D8A /* libcxxreact.a */,
@@ -980,6 +1000,27 @@
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTBlob-tvOS.a";
+			remoteRef = 2D16E6711FA4F8DC00B85C8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D16E6841FA4F8DC00B85C8A /* libfishhook.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfishhook.a;
+			remoteRef = 2D16E6831FA4F8DC00B85C8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D16E6861FA4F8DC00B85C8A /* libfishhook-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libfishhook-tvOS.a";
+			remoteRef = 2D16E6851FA4F8DC00B85C8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1211,7 +1252,6 @@
 				F7BD5F6F9E3D4F5C9F01254B /* FontAwesome.ttf in Resources */,
 				AFB43FCAB1C94E98883B1AA3 /* Foundation.ttf in Resources */,
 				C006AE5052CF4531AE72B54B /* Ionicons.ttf in Resources */,
-				84219AEB2004B2820009AB3D /* GoogleService-Info.plist in Resources */,
 				F558C6C18E884E7395A5A06D /* MaterialIcons.ttf in Resources */,
 				6CD6A0D896BA418E8C0C6456 /* Octicons.ttf in Resources */,
 				917C17637DB44A709DDC80FA /* Roboto_medium.ttf in Resources */,
@@ -1222,6 +1262,7 @@
 				B3EE77055BDF4B32BBC4DC63 /* Feather.ttf in Resources */,
 				4DF9596D2BB54D0FA52EB1D1 /* MaterialCommunityIcons.ttf in Resources */,
 				5F1E8C44913C49BBB36CDE5C /* Kanit-Light.ttf in Resources */,
+				84EDB5662009F5A8007E7420 /* GoogleService-Info.plist in Resources */,
 				36BD57BFAB5040ADA7D881FD /* Kanit-Medium.ttf in Resources */,
 				FFD154D0D4324399A531714D /* Kanit-Regular.ttf in Resources */,
 			);
