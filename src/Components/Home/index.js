@@ -35,7 +35,7 @@ class Home extends Component {
                             <Row style={[styles.box, styles.centered]}>
                                 <TouchableOpacity style={{ alignItems: 'center' }}>
                                     <FontAwesome name="info-circle" style={[styles.iconBox]} />
-                                    <Text>วิธีใช้</Text>
+                                    <Text style={styles.kanit}>วิธีใช้</Text>
                                 </TouchableOpacity>
                             </Row>
                         </Col>
@@ -43,13 +43,13 @@ class Home extends Component {
                             <Row style={[styles.box, styles.centered]}>
                                 <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => Actions.info()}>
                                     <FontAwesome name="book" style={[styles.iconBox]} />
-                                    <Text>ความรู้เรื่องสุกร</Text>
+                                    <Text style={styles.kanit}>ความรู้เรื่องสุกร</Text>
                                 </TouchableOpacity>
                             </Row>
                             <Row style={[styles.box, styles.centered]}>
                                 <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => Actions.about()}>
                                     <FontAwesome name="question-circle" style={[styles.iconBox]} />
-                                    <Text>เกี่ยวกับเรา</Text>
+                                    <Text style={styles.kanit}>เกี่ยวกับเรา</Text>
                                 </TouchableOpacity>
                             </Row>
                         </Col>
