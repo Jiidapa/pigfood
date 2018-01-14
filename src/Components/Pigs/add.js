@@ -13,8 +13,8 @@ const Item = Picker.Item;
 
 class AddPig extends Component {
 
-    submit(name, picture) {
-        firebase.database().ref('pigs').push({ name, picture })
+    submit(type, amount) {
+        firebase.database().ref('pigs').push({ type, amount })
         .then(() => {
             Actions.pop();
         });
@@ -43,11 +43,11 @@ class AddPig extends Component {
                                         onValueChange={(value) => this.props.typeChange(value)}
                                     >
                                         <Item label="เลือกประเภทหมู" value="" />
-                                        <Item label="สุกรเลียราง" value="1" />
-                                        <Item label="สุกรหย่านม" value="2" />
-                                        <Item label="สุกรรุ่น" value="3" />
-                                        <Item label="สุกรแม่พันธุ์" value="4" />
-                                        <Item label="สุกรพ่อพันธุ์" value="5" />
+                                        <Item label="สุกรเลียราง" value="สุกรเลียราง" />
+                                        <Item label="สุกรหย่านม" value="สุกรหย่านม" />
+                                        <Item label="สุกรรุ่น" value="สุกรรุ่น" />
+                                        <Item label="สุกรแม่พันธุ์" value="สุกรแม่พันธุ์" />
+                                        <Item label="สุกรพ่อพันธุ์" value="สุกรพ่อพันธุ์" />
                                     </Picker>
                                     <FormItem floatingLabel>
                                         <Label>จำนวนสุกร</Label>
@@ -59,7 +59,7 @@ class AddPig extends Component {
                         </CardItem>
                     </Card>
                     <View style={{ flex: 1, justifyContent: 'flex-end', }}>
-                        <Button style={{ borderRadius: 0 }} block warning onPress={() => this.submit()}>
+                        <Button style={{ borderRadius: 0 }} block warning onPress={() => this.submit(this.props.type, this.props.amount)}>
                             <FontAwesome style={styles.iconButton} name='floppy-o' />
                             <Text style={styles.kanit}>บันทึก</Text>
                         </Button>
