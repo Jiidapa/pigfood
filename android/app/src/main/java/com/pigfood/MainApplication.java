@@ -3,6 +3,7 @@ package com.pigfood;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.RNFetchBlob.RNFetchBlobPackage;
 import com.imagepicker.ImagePickerPackage;
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.database.RNFirebaseDatabasePackage;
@@ -28,6 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
               new MainReactPackage(),
+            new RNFetchBlobPackage(),
             new ImagePickerPackage(),
               new RNFirebasePackage(),
               new VectorIconsPackage(),

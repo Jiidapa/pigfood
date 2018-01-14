@@ -1,7 +1,8 @@
 // manager/src/reducers/AuthReducers.js
 import {
     FARM_NAME_CHANGE,
-    FARM_PICTURE_CHANGE
+    FARM_PICTURE_CHANGE,
+    FARM_FETCH_SUCCESS
 } from '../Actions/types';
 
 const ImgUpload = require('../../assets/img/icons/uploadbtn.png');
@@ -18,6 +19,9 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, name: action.payload };
         case FARM_PICTURE_CHANGE:
             return { ...state, picture: action.payload };
+        case FARM_FETCH_SUCCESS:
+            console.log(action);
+            return action.payload;
         default:
             return state;
     }

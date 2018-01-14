@@ -6,11 +6,16 @@ import { Container, Content, Text, Card, CardItem } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { MyHeader } from '../common';
 import styles from '../styles';
+import { farmFetch } from '../../Actions';
+import { connect } from 'react-redux';
 
-const fram1 = require('../../../assets/img/menu/menu1_02.png');
-const fram2 = require('../../../assets/img/menu/menu1_03.png');
+const farm1 = require('../../../assets/img/menu/menu1_02.png');
+const farm2 = require('../../../assets/img/menu/menu1_03.png');
 
 class Farms extends Component {
+    componentWillMount() {
+        this.props.farmFetch();
+    }
     render() {
         return (
             <Container>
@@ -27,7 +32,7 @@ class Farms extends Component {
                                     <CardItem>
                                         <TouchableOpacity onPress={() => Actions.pigs()}>
                                             <View>
-                                                <Image source={fram1} style={{ width: 150, height: 150, borderRadius: 4 }} />
+                                                <Image source={farm1} style={{ width: 150, height: 150, borderRadius: 4 }} />
                                             </View>
                                             <View style={{ borderTopWidth: 0.5, borderColor: '#ddd', marginTop: 8, alignItems: 'center' }}>
                                                 <Text style={styles.caption}>ฟาร์มโชมัย</Text>
@@ -43,7 +48,7 @@ class Farms extends Component {
                                     <CardItem>
                                         <TouchableOpacity>
                                             <View>
-                                                <Image source={fram2} style={{ width: 150, height: 150, borderRadius: 4 }} />
+                                                <Image source={farm2} style={{ width: 150, height: 150, borderRadius: 4 }} />
                                             </View>
                                             <View style={{ borderTopWidth: 0.5, borderColor: '#ddd', marginTop: 8, alignItems: 'center' }}>
                                                 <Text style={styles.caption}>ฟาร์มโชว์เฉยๆ</Text>
@@ -60,4 +65,4 @@ class Farms extends Component {
     }
 }
 
-export default Farms;
+export default connect(null, { farmFetch })(Farms);
