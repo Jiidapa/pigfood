@@ -8,7 +8,7 @@ class Foods extends Component {
     render() {
         return (
             <MyHeader title='แสดงรายการอาหาร'>
-                    <TouchableOpacity onPress={() => Actions.AddFood()}>
+                    <TouchableOpacity onPress={() => Actions.addFood()}>
                         <FontAwesome name="plus-circle" style={[styles.icon]} />
                     </TouchableOpacity>
             </MyHeader>
