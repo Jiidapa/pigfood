@@ -15,14 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "959603098432-d710hnjc7ensfk5um1qk9aa1hpgf2n96.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.pigfood",
-            "certificate_hash": "a70bbc6f0e1f2f1863c70720209b26413c0800fb"
-          }
-        },
-        {
           "client_id": "959603098432-5ptlh66on8lto54mpec8mj1hq3eii85f.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

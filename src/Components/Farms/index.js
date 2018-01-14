@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { View, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Image, ListView } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Actions } from 'react-native-router-flux';
 import { Container, Content, Text, Card, CardItem } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
-import { MyHeader } from '../common';
+import { MyHeader, ListItem } from '../common';
 import styles from '../styles';
 import { farmFetch } from '../../Actions';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 
 const farm1 = require('../../../assets/img/menu/menu1_02.png');
 const farm2 = require('../../../assets/img/menu/menu1_03.png');
@@ -15,8 +16,28 @@ const farm2 = require('../../../assets/img/menu/menu1_03.png');
 class Farms extends Component {
     componentWillMount() {
         this.props.farmFetch();
+        this.createDataSource(this.props);
+    }
+    componentWillReceiveProps(nextProps) {
+        // nextProps are the next set of props that this component
+        // will be rendered with
+        // this.props is still the old set of props
+
+        this.createDataSource(nextProps);
+    }
+
+    createDataSource({ farm }) {
+        const ds = new ListView.DataSource({
+            rowHasChanged: (r1, r2) => r1 !== r2
+        });
+
+        this.datasource = ds.cloneWithRows(farm);
+    }
+    renderRow(farm) {
+        return <ListItem farm={farm} />;
     }
     render() {
+        console.log(this.props);
         return (
             <Container>
                 <MyHeader title='ฟาร์ม'>
@@ -25,44 +46,27 @@ class Farms extends Component {
                     </TouchableOpacity>
                 </MyHeader>
                 <Content>
-                    <Grid>
-                        <Col>
-                            <Row>
-                                <Card>
-                                    <CardItem>
-                                        <TouchableOpacity onPress={() => Actions.pigs()}>
-                                            <View>
-                                                <Image source={farm1} style={{ width: 150, height: 150, borderRadius: 4 }} />
-                                            </View>
-                                            <View style={{ borderTopWidth: 0.5, borderColor: '#ddd', marginTop: 8, alignItems: 'center' }}>
-                                                <Text style={styles.caption}>ฟาร์มโชมัย</Text>
-                                            </View>
-                                        </TouchableOpacity>
-                                    </CardItem>
-                                </Card>
-                            </Row>
-                        </Col>
-                        <Col>
-                            <Row>
-                                <Card>
-                                    <CardItem>
-                                        <TouchableOpacity>
-                                            <View>
-                                                <Image source={farm2} style={{ width: 150, height: 150, borderRadius: 4 }} />
-                                            </View>
-                                            <View style={{ borderTopWidth: 0.5, borderColor: '#ddd', marginTop: 8, alignItems: 'center' }}>
-                                                <Text style={styles.caption}>ฟาร์มโชว์เฉยๆ</Text>
-                                            </View>
-                                        </TouchableOpacity>
-                                    </CardItem>
-                                </Card>
-                            </Row>
-                        </Col>
-                    </Grid>
+                    <ListView
+                        enableEmptySections
+                        dataSource={this.datasource}
+                        renderRow={this.renderRow}
+                    />
                 </Content>
             </Container>
         );
     }
 }
+const mapStateToProps = state => {
+    const farm = _.map(state.farm, (val, uid) => {
+        var temp = {
+            name: val.name,
+            picture: val.picture,
+            uid: uid
+        }
+        return temp;
+        // { shift: 'Monday', phone: '333-333-3333', name: 'Him', uid: '1jdksl' }
+    });
 
-export default connect(null, { farmFetch })(Farms);
+    return { farm };
+};
+export default connect(mapStateToProps, { farmFetch })(Farms);
