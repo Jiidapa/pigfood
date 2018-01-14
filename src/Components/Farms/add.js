@@ -75,7 +75,7 @@ class AddFarm extends Component {
                     </View>
                     <Button style={{ borderRadius: 0 }} block warning onPress={() => this.submit(this.props.name, this.props.picture)}>
                         <FontAwesome style={styles.iconButton} name='floppy-o' />
-                        <Text>บันทึก</Text>
+                        <Text style={styles.kanit}>บันทึก</Text>
                     </Button>
                 </Content>
             </Container>

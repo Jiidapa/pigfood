@@ -3,7 +3,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Actions } from 'react-native-router-flux';
 import { TouchableOpacity, Image, Platform } from 'react-native';
 import { Input, View, Label, Container, Header, Title, Content, Button, Icon, Text, Right, Body, Left, Picker, Form, Item as FormItem } from "native-base";
-import { MyHeader,Cover } from '../common';
+import { MyHeader, Cover } from '../common';
 import styles from '../styles';
 const BGMenu = require('../../../assets/img/menu/menu1_04.png');
 const Item = Picker.Item;
@@ -32,13 +32,13 @@ class AddPig extends Component {
                     <Text style={[styles.textPrimary, { fontSize: 14 }]}>เพิ่มข้อมูลสุกรของท่าน</Text>
                 </Cover>
                 <Content contentContainerStyle={{ flex: 1 }}>
-                    <View style={{  flexDirection: 'row' }}>
-                        <View style={{ width: 100, paddingTop: 14, paddingLeft:20 }}>
+                    <View style={{ flexDirection: 'row' }}>
+                        <View style={{ width: 100, paddingTop: 14, paddingLeft: 20 }}>
                             <Text style={styles.kanit}>ชนิดสุกร</Text>
                         </View>
                         <View>
                             <Form style={{ width: 200, }}>
-                                
+
                                 <Picker
                                     iosHeader="Select one"
                                     mode="dropdown"
@@ -59,11 +59,11 @@ class AddPig extends Component {
                             <Input style={styles.kanit} placeholder="จำนวนสุกร" />
                         </FormItem>
                     </Form>
-                    <View style={{flex:1, justifyContent :'flex-end',}}>
-                    <Button style={{ borderRadius: 0 }} block warning>
-                        <FontAwesome style={styles.iconButton} name='floppy-o' />
-                        <Text style={styles.kanit}>บันทึก</Text>
-                    </Button>
+                    <View style={{ flex: 1, justifyContent: 'flex-end', }}>
+                        <Button style={{ borderRadius: 0 }} block warning>
+                            <FontAwesome style={styles.iconButton} name='floppy-o' />
+                            <Text style={styles.kanit}>บันทึก</Text>
+                        </Button>
                     </View>
                 </Content>
             </Container>
