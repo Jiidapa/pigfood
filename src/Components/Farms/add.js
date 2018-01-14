@@ -79,7 +79,10 @@ class AddFarm extends Component {
     }
 
     submit(name, picture) {
-        firebase.database().ref('farms').push({ name, picture });
+        firebase.database().ref('farms').push({ name, picture })
+        .then(() => {
+            Actions.pop();
+        });
     }
 
     render() {
