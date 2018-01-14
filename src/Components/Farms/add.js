@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Actions } from 'react-native-router-flux';
-import { MyHeader, Cover } from '../common';
+import ImagePicker from 'react-native-image-picker';
+import firebase from 'react-native-firebase';
 import {
     Container,
     Text,
@@ -13,19 +15,13 @@ import {
     Label,
     Button
 } from 'native-base';
+import { MyHeader, Cover } from '../common';
+import { nameChange, pictureChange } from '../../Actions';
 import styles from '../styles';
 
 const BGMenu = require('../../../assets/img/menu/menu1_04.png');
-const ImgUpload = require('../../../assets/img/icons/uploadbtn.png');
-let ImagePicker = require('react-native-image-picker');
 
 class AddFarm extends Component {
-    componentWillMount() {
-        this.setState({
-            img: ImgUpload,
-            farmName: ''
-        });
-    }
 
     show() {
         ImagePicker.showImagePicker((response) => {
@@ -42,11 +38,13 @@ class AddFarm extends Component {
 
                 // You can also display the image using data:
                 // let source = { uri: 'data:image/jpeg;base64,' + response.data };
-                this.setState({
-                    img: source
-                });
+                this.props.pictureChange(source);
             }
         });
+    }
+
+    submit(name, picture) {
+        firebase.database().ref('farms').push({ name, picture });
     }
 
     render() {
@@ -64,18 +62,18 @@ class AddFarm extends Component {
                     <View style={[styles.row, { flex: 1, backgroundColor: '#fff' }]}>
                         <Form>
                             <Item floatingLabel>
-                                <Label>ชื่อฟาร์ม {this.state.farmName}</Label>
-                                <Input onChangeText={(text) => this.setState({ farmName: text })} value={this.state.farmName} />
+                                <Label>ชื่อฟาร์ม {this.props.name}</Label>
+                                <Input onChangeText={this.props.nameChange.bind()} value={this.props.name} />
                             </Item>
                         </Form>
                         <View style={[styles.row, { alignItems: 'center', marginTop: 8 }]}>
                             <Text style={styles.textMedium}>รูปฟาร์ม</Text>
                             <TouchableOpacity onPress={() => this.show()}>
-                                <Image source={this.state.img} style={{ marginTop: 32, width: 140, height: 140 }} />
+                                <Image source={this.props.picture} style={{ marginTop: 32, width: 140, height: 140 }} />
                             </TouchableOpacity>
                         </View>
                     </View>
-                    <Button style={{ borderRadius: 0 }} block warning>
+                    <Button style={{ borderRadius: 0 }} block warning onPress={() => this.submit(this.props.name, this.props.picture)}>
                         <FontAwesome style={styles.iconButton} name='floppy-o' />
                         <Text>บันทึก</Text>
                     </Button>
@@ -85,4 +83,13 @@ class AddFarm extends Component {
     }
 }
 
-export default AddFarm;
+const mapStateToProps = ({ farm }) => {
+    const { name, picture } = farm;
+
+    return { name, picture };
+};
+
+export default connect(mapStateToProps, {
+    nameChange,
+    pictureChange
+})(AddFarm);

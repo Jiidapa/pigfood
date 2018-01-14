@@ -6,9 +6,24 @@ import { Container, Content, Text, Card, CardItem } from 'native-base';
 import { MyHeader } from '../common';
 import styles from '../styles';
 import { Col, Row, Grid } from 'react-native-easy-grid';
-const pig1 = require('../../../assets/img/knowledge/knowledge03.jpg');
-class Pigs extends Component {
+import Swipeout from 'react-native-swipeout';
 
+
+let swipeBtns = [
+    {
+        text: 'Edit',
+        backgroundColor: 'orange',
+        underlayColor: 'rgba(0, 0, 0, 1, 0.6)'
+        // onPress: () => { this.duplicateNote(rowData) }
+     },
+    {
+      text: 'Delete',
+      backgroundColor: 'red',
+      underlayColor: 'rgba(0, 0, 0, 1, 0.6)'
+    //   onPress: () => { this.deleteNote(rowData) }
+   }
+  ];
+class Pigs extends Component {
     render() {
         return (
             <Container>
@@ -20,11 +35,11 @@ class Pigs extends Component {
                 <Content>
                     <Grid>
                         <Col>
+                        <Swipeout right={swipeBtns} backgroundColor= 'transparent'>
                         <TouchableOpacity onPress={() => Actions.Foods()}>
                             <Row>
                                 <Card>
                                     <CardItem>
-                                            <Image source={pig1} style={{ width: 150, height: 150, borderRadius: 4 }} />
                                             <View style={{paddingLeft: 20}}>
                                                 <Text>ประเภท : หมูอาย</Text>
                                                 <Text>จำนวน : 1 ตัว</Text>
@@ -33,11 +48,11 @@ class Pigs extends Component {
                                 </Card>
                             </Row>
                             </TouchableOpacity>
+                        </Swipeout>
                             <TouchableOpacity>
                             <Row>
                                 <Card>
                                     <CardItem>
-                                        <Image source={pig1} style={{ width: 150, height: 150, borderRadius: 4 }} />
                                         <View style={{paddingLeft: 20}}>
                                             <Text>ประเภท : หมูดรีม</Text>
                                             <Text>จำนวน : 1 ตัว</Text>
