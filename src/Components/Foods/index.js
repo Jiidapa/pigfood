@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-
+import { View, Text, TouchableOpacity } from 'react-native';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import {MyHeader} from '../common';
+import styles from '../styles';
 class Foods extends Component {
     render() {
         return (
-            <View>
-                <Text>Foods</Text>
-            </View>
+            <MyHeader title='แสดงรายการอาหาร'>
+                    <TouchableOpacity onPress={() => Actions.AddFood()}>
+                        <FontAwesome name="plus-circle" style={[styles.icon]} />
+                    </TouchableOpacity>
+            </MyHeader>
         );
     }
 }
