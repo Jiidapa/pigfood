@@ -26,15 +26,16 @@ const fs = RNFetchBlob.fs;
 window.XMLHttpRequest = RNFetchBlob.polyfill.XMLHttpRequest;
 window.Blob = Blob;
 const BGMenu = require('../../../assets/img/menu/menu1_04.png');
+const sessionId = new Date().getTime();
 
 class AddFarm extends Component {
 
-    uploadImage(uri, mime = 'application/octet-stream') {
+    uploadImage(uri, mime = 'image/jpg') {
         return new Promise((resolve, reject) => {
           const uploadUri = Platform.OS === 'ios' ? uri.replace('file://', '') : uri;
           let uploadBlob = null;
     
-          const imageRef = firebase.storage().ref('images').child('farms');
+          const imageRef = firebase.storage().ref('images').child(`${sessionId}`);
     
           fs.readFile(uploadUri, 'base64')
             .then((data) => {
@@ -42,7 +43,7 @@ class AddFarm extends Component {
             })
             .then((blob) => {
               uploadBlob = blob;
-              return imageRef.put(blob, { contentType: mime });
+              return imageRef.put(blob._ref, { contentType: mime });
             })
             .then(() => {
               uploadBlob.close();
@@ -71,7 +72,7 @@ class AddFarm extends Component {
                 this.uploadImage(response.uri)
                 .then(url => { 
                     alert('uploaded'); 
-                    this.props.pictureChange(url);
+                    this.props.pictureChange({ uri: url });
                 })
                 .catch(error => console.log(error));
             }
