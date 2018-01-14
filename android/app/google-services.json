@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "959603098432-d710hnjc7ensfk5um1qk9aa1hpgf2n96.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pigfood",
+            "certificate_hash": "a70bbc6f0e1f2f1863c70720209b26413c0800fb"
+          }
+        },
+        {
+          "client_id": "959603098432-5ptlh66on8lto54mpec8mj1hq3eii85f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pigfood",
+            "certificate_hash": "b01fbf1a47006c3db5782d69e85a9f395031b6cf"
+          }
+        },
+        {
           "client_id": "959603098432-8qpo5q8unoao3397aomfupga57ovhpfo.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +45,20 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959603098432-0qu33ab5ga5c6fugm5enlm33arcfuts7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.pigfood"
+              }
+            },
+            {
+              "client_id": "959603098432-8qpo5q8unoao3397aomfupga57ovhpfo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

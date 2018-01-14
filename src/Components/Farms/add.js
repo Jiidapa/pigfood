@@ -79,7 +79,10 @@ class AddFarm extends Component {
     }
 
     submit(name, picture) {
-        firebase.database().ref('farms').push({ name, picture });
+        firebase.database().ref('farms').push({ name, picture })
+        .then(() => {
+            Actions.pop();
+        });
     }
 
     render() {
@@ -110,7 +113,7 @@ class AddFarm extends Component {
                     </View>
                     <Button style={{ borderRadius: 0 }} block warning onPress={() => this.submit(this.props.name, this.props.picture)}>
                         <FontAwesome style={styles.iconButton} name='floppy-o' />
-                        <Text>บันทึก</Text>
+                        <Text style={styles.kanit}>บันทึก</Text>
                     </Button>
                 </Content>
             </Container>
