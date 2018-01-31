@@ -18,6 +18,8 @@ import Foods from './Components/Foods';
 import AddFood from './Components/Foods/add';
 import EditFood from './Components/Foods/edit';
 
+import Mixer from './Components/Mixer';
+
 const RouterComponent = () => {
     return (
         <Router navigationBarStyle={{ backgroundColor: '#1E88E5' }} titleStyle={{ fontFamily: 'Kanit-Light', color: 'white' }}>
@@ -34,9 +36,11 @@ const RouterComponent = () => {
                 <Scene key="editPig" component={EditPig} title="แก้ไขสุกร" />
                 <Scene key="pigs" component={Pigs} title="สุกร" />
                 {/* foods management */}
-                <Scene key="Foods" component={Foods} title="สูตรอาหาร" />
+                <Scene key="foods" component={Foods} title="สูตรอาหาร" />
                 <Scene key="addFood" component={AddFood} title="เพิ่มสูตรอาหาร" />
                 <Scene key="editFood" component={EditFood} title="แก้ไขสูตรอาหาร" />
+
+                <Scene key="mixer" component={Mixer} title="ผสมอาหาร" />
             </Stack>
         </Router>
     );

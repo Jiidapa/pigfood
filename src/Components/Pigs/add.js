@@ -15,9 +15,9 @@ class AddPig extends Component {
 
     submit(type, amount) {
         firebase.database().ref('pigs').push({ type, amount })
-        .then(() => {
-            Actions.pop();
-        });
+            .then(() => {
+                Actions.pop();
+            });
     }
 
     render() {
@@ -31,7 +31,7 @@ class AddPig extends Component {
                         </Text>
                     <Text style={[styles.textPrimary, { fontSize: 14 }]}>เพิ่มข้อมูลสุกรของท่าน {this.props.type}</Text>
                 </Cover>
-                <Content contentContainerStyle={{ flex: 1 }}>
+                <Content contentContainerStyle={{ flex: 1, padding: 8 }}>
                     <Card>
                         <CardItem>
                             <View style={{ flex: 1 }}>
@@ -55,16 +55,15 @@ class AddPig extends Component {
                                     </FormItem>
                                 </Form>
                             </View>
-
                         </CardItem>
                     </Card>
-                    <View style={{ flex: 1, justifyContent: 'flex-end', }}>
-                        <Button style={{ borderRadius: 0 }} block warning onPress={() => this.submit(this.props.type, this.props.amount)}>
-                            <FontAwesome style={styles.iconButton} name='floppy-o' />
-                            <Text style={styles.kanit}>บันทึก</Text>
-                        </Button>
-                    </View>
                 </Content>
+                <View style={{ flex: 1, justifyContent: 'flex-end', }}>
+                    <Button style={{ borderRadius: 0 }} block warning onPress={() => this.submit(this.props.type, this.props.amount)}>
+                        <FontAwesome style={styles.iconButton} name='floppy-o' />
+                        <Text style={styles.kanit}>บันทึก</Text>
+                    </Button>
+                </View>
             </Container>
         );
     }

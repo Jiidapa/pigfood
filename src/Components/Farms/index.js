@@ -4,14 +4,15 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Actions } from 'react-native-router-flux';
 import { Container, Content, Text, Card, CardItem } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
-import { MyHeader, ListItem } from '../common';
-import styles from '../styles';
-import { farmFetch } from '../../Actions';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import { MyHeader, ListItem, Cover } from '../common';
+import styles from '../styles';
+import { farmFetch } from '../../Actions';
 
 const farm1 = require('../../../assets/img/menu/menu1_02.png');
 const farm2 = require('../../../assets/img/menu/menu1_03.png');
+const BGMenu = require('../../../assets/img/menu/menu1_05.png');
 
 class Farms extends Component {
     componentWillMount() {
@@ -34,7 +35,13 @@ class Farms extends Component {
         this.datasource = ds.cloneWithRows(farm);
     }
     renderRow(farm) {
-        return <ListItem farm={farm} />;
+    return (
+            <Grid>
+                <Col>
+                    <ListItem farm={farm} />
+                </Col>
+            </Grid>
+        );
     }
     render() {
         console.log(this.props);
@@ -61,6 +68,7 @@ const mapStateToProps = state => {
         var temp = {
             name: val.name,
             picture: val.picture,
+            detail: val.detail,
             uid: uid
         }
         return temp;
