@@ -36,7 +36,7 @@ class Foods extends Component {
         return (
             <Container>
                 <MyHeader title='แสดงสูตรอาหาร'>
-                    <TouchableOpacity onPress={() => Actions.addPig()}>
+                    <TouchableOpacity onPress={() => Actions.addFood()}>
                         <FontAwesome name="plus-circle" style={[styles.icon]} />
                     </TouchableOpacity>
                 </MyHeader>
