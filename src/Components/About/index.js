@@ -31,7 +31,7 @@ class About extends Component {
                 <MyHeader title="เกี่ยวกับเรา" />
                 <Cover bgsource={BGMenu}>
                     <Text style={[styles.textPrimary, { fontSize: 26 }]}>About{' '}
-                        <Text style={{ color: 'orange', fontSize: 26 }}>Me</Text>{' '}
+                        <Text style={{ color: 'orange', fontSize: 26 }}>US</Text>{' '}
                     </Text>
                 </Cover>
                 <Content>
