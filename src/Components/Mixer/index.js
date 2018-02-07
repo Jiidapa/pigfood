@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { Actions } from 'react-native-router-flux';
-import { View, TouchableOpacity, ImageBackground, StyleSheet, Image } from 'react-native';
+import { Actions, ActionConst } from 'react-native-router-flux';
+import { View, TouchableOpacity, ImageBackground, StyleSheet, Image, Platform } from 'react-native';
 import { Container, Content, Text, Card, CardItem, Button } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
+import firebase from 'react-native-firebase';
 import { MyHeader, Cover } from '../common';
 import styles from '../styles';
 
 const BGMenu = require('../../../assets/img/menu/menu1_05.png');
 
 class Mixer extends Component {
+    sendToServer() {
+        const data = { 1: 2.0, 2: 1.0, 3: 0.75, 4: 0.55, 5: 0.18, 6: 0.0, 7: 0.0, 8: 0.0, 9: 0.0, status: 1 };
+        const work = firebase.database().ref('work');
+
+        work.update(data);
+        Actions.home({type: Platform.OS === 'ios' ? ActionConst.REPLACE : ActionConst.RESET});
+    }
+
     render() {
         return (
             <Container>
@@ -67,8 +76,8 @@ class Mixer extends Component {
                         </Card>
                     </View>
                     <View style={{ height: 45 }}>
-                        <Button info block style={{ borderRadius: 0 }}>
-                            <Text>ยืนยัน</Text>
+                        <Button info block style={{ borderRadius: 0 }} onPress={() => this.sendToServer()}>
+                            <Text style={styles.kanit}>ยืนยัน</Text>
                         </Button>
                     </View>
                 </Content>

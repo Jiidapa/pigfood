@@ -32,5 +32,7 @@ target 'pigfood' do
 
   pod 'react-native-fetch-blob',
     :path => '../node_modules/react-native-fetch-blob'
+    pod 'GoogleToolboxForMac/Logger' 
+    pod 'GoogleToolboxForMac', '~> 2.1'
 
 end

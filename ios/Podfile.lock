@@ -1,21 +1,21 @@
 PODS:
-  - Firebase/Core (4.8.0):
-    - FirebaseAnalytics (= 4.0.5)
-    - FirebaseCore (= 4.0.13)
-  - Firebase/Database (4.8.0):
+  - Firebase/Core (4.8.2):
+    - FirebaseAnalytics (= 4.0.9)
+    - FirebaseCore (= 4.0.14)
+  - Firebase/Database (4.8.2):
     - Firebase/Core
-    - FirebaseDatabase (= 4.1.3)
-  - Firebase/Messaging (4.8.0):
+    - FirebaseDatabase (= 4.1.4)
+  - Firebase/Messaging (4.8.2):
     - Firebase/Core
     - FirebaseMessaging (= 2.0.8)
-  - FirebaseAnalytics (4.0.5):
+  - FirebaseAnalytics (4.0.9):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
-  - FirebaseCore (4.0.13):
+  - FirebaseCore (4.0.14):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseDatabase (4.1.3):
+  - FirebaseDatabase (4.1.4):
     - FirebaseAnalytics (~> 4.0)
     - FirebaseCore (~> 4.0)
     - leveldb-library (~> 1.18)
@@ -27,11 +27,64 @@ PODS:
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/Logger (~> 2.1)
     - Protobuf (~> 3.1)
+  - GoogleToolboxForMac (2.1.3):
+    - GoogleToolboxForMac/Core (= 2.1.3)
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+    - GoogleToolboxForMac/GeometryUtils (= 2.1.3)
+    - GoogleToolboxForMac/KVO (= 2.1.3)
+    - GoogleToolboxForMac/Logger (= 2.1.3)
+    - GoogleToolboxForMac/NSData+zlib (= 2.1.3)
+    - GoogleToolboxForMac/NSDictionary+URLArguments (= 2.1.3)
+    - GoogleToolboxForMac/NSFileHandle+UniqueName (= 2.1.3)
+    - GoogleToolboxForMac/NSScanner+JSON (= 2.1.3)
+    - GoogleToolboxForMac/NSString+HTML (= 2.1.3)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
+    - GoogleToolboxForMac/NSString+XML (= 2.1.3)
+    - GoogleToolboxForMac/NSThread+Blocks (= 2.1.3)
+    - GoogleToolboxForMac/Regex (= 2.1.3)
+    - GoogleToolboxForMac/StringEncoding (= 2.1.3)
+    - GoogleToolboxForMac/SystemVersion (= 2.1.3)
+    - GoogleToolboxForMac/URLBuilder (= 2.1.3)
+  - GoogleToolboxForMac/Core (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/DebugUtils (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
   - GoogleToolboxForMac/Defines (2.1.3)
+  - GoogleToolboxForMac/GeometryUtils (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/KVO (2.1.3):
+    - GoogleToolboxForMac/Core (= 2.1.3)
+    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
   - GoogleToolboxForMac/Logger (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
   - GoogleToolboxForMac/NSData+zlib (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
+    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
+  - GoogleToolboxForMac/NSFileHandle+UniqueName (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSScanner+JSON (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSString+HTML (2.1.3):
+    - GoogleToolboxForMac/Core (= 2.1.3)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
+  - GoogleToolboxForMac/NSString+XML (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSThread+Blocks (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/Regex (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/StringEncoding (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/SystemVersion (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/URLBuilder (2.1.3):
+    - GoogleToolboxForMac/Core (= 2.1.3)
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+    - GoogleToolboxForMac/NSDictionary+URLArguments (= 2.1.3)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -39,7 +92,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.5.0)
-  - react-native-fetch-blob (0.10.6):
+  - react-native-fetch-blob (0.10.1):
     - React/Core
   - React/BatchedBridge (0.52.0):
     - React/Core
@@ -86,6 +139,8 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
+  - GoogleToolboxForMac (~> 2.1)
+  - GoogleToolboxForMac/Logger
   - react-native-fetch-blob (from `../node_modules/react-native-fetch-blob`)
   - React/BatchedBridge (from `../node_modules/react-native`)
   - React/Core (from `../node_modules/react-native`)
@@ -111,10 +166,10 @@ EXTERNAL SOURCES:
     :path: ../node_modules/react-native/ReactCommon/yoga/Yoga.podspec
 
 SPEC CHECKSUMS:
-  Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
-  FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
-  FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
-  FirebaseDatabase: 7088bfc4af2cc00231bb36e1404fc2d7509eb4dc
+  Firebase: 7d3b8cd837ad9fcd391657734c0d56dab8e9a5a3
+  FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
+  FirebaseCore: 2e0b98fb2d64ca8140136beff15772bdd14d2dd7
+  FirebaseDatabase: de4446507ccd3257fca37d16f40e1540324571fd
   FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
   FirebaseMessaging: dfdcd307c2382290a1e297a81d0f18370f5b1bcd
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
@@ -122,9 +177,9 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   React: 61a6bdf17a9ff16875c230e6ff278d9de274e16c
-  react-native-fetch-blob: 2bef9be702de8726f4d7bf58d2345579aaaee60d
+  react-native-fetch-blob: 280c2069529249b35d1d92df065f573dce29d4ff
   yoga: 646606bf554d54a16711f35596178522fbc00480
 
-PODFILE CHECKSUM: d852469112ac92ec75863cbd29961c814ea267de
+PODFILE CHECKSUM: c3679793e9f704b3b2605bd95dc19de6dfcebc1e
 
 COCOAPODS: 1.3.1

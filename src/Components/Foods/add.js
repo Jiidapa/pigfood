@@ -25,8 +25,33 @@ class AddFood extends Component {
 
     componentWillMount() {
         this.setState({
-            counter: 1
+            counter: 1,
+            material: [
+                {
+                    value: ''
+                }
+            ]
         });
+    }
+
+    setValue(i, value) {
+        if (this.state.material[i].value != null) {
+            this.state.material[i].value = value;
+        }
+    }
+
+    addItem() {
+        this.setState({
+            counter: this.state.counter + 1,
+        });
+        this.state.material.push({ value: '' });
+    }
+
+    delItem() {
+        this.setState({
+            counter: this.state.counter - 1,
+        });
+        this.state.material.pop();
     }
 
     renderDropDown() {
@@ -37,13 +62,13 @@ class AddFood extends Component {
                     <View style={{ flex: 3 }}>
                         <Picker
                             mode="dropdown"
-                            placeholder={`${i+1} ส่วนผสม`}
-                        // selectedValue={this.state.selected2}
-                        // onValueChange={this.onValueChange2.bind(this)}
+                            placeholder={`${i + 1} ส่วนผสม`}
+                        selectedValue={this.state.material[i].value}
+                        onValueChange={(value) => this.setValue(i, value)}
                         >
                             <Item label="ข้าวโพดบด" value="0" />
                             <Item label="รำละเอียด" value="1" />
-                            <Item label="กากถ่วเหลือง" value="2" />
+                            <Item label="กากถั่วเหลือง" value="2" />
                             <Item label="ปลาป่น" value="3" />
                             <Item label="ไดแคลเซียมฟอสเฟส" value="4" />
                             <Item label="เกลือป่น" value="5" />
@@ -89,11 +114,11 @@ class AddFood extends Component {
                             <CardItem>
                                 <View style={{ flex: 1 }}>
                                     <View style={{ flexDirection: 'row' }}>
-                                        <Button info onPress={() => this.setState({ counter: this.state.counter + 1 })}>
+                                        <Button info onPress={() => this.addItem()}>
                                             <Text>ADD</Text>
                                         </Button>
                                         <Text> </Text>
-                                        <Button danger onPress={() => this.setState({ counter: this.state.counter - 1 })}>
+                                        <Button danger onPress={() => this.delItem()}>
                                             <Text>DEL</Text>
                                         </Button>
                                     </View>

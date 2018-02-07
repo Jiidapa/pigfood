@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "959603098432-ud1a4i1isnioqq6hkmbqdbv4u29qfe85.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pigfood",
+            "certificate_hash": "2cc44af6e86cc26535ae98f51ed105445c60c25c"
+          }
+        },
+        {
+          "client_id": "959603098432-d710hnjc7ensfk5um1qk9aa1hpgf2n96.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pigfood",
+            "certificate_hash": "a70bbc6f0e1f2f1863c70720209b26413c0800fb"
+          }
+        },
+        {
           "client_id": "959603098432-5ptlh66on8lto54mpec8mj1hq3eii85f.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

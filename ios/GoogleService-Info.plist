@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>374517092568-v7tu7e9m052rfntk0drhal0i1ugfkjgc.apps.googleusercontent.com</string>
+	<string>959603098432-0qu33ab5ga5c6fugm5enlm33arcfuts7.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.374517092568-v7tu7e9m052rfntk0drhal0i1ugfkjgc</string>
+	<string>com.googleusercontent.apps.959603098432-0qu33ab5ga5c6fugm5enlm33arcfuts7</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDpsxKD8VXY5B68kqWLkyADhs_P6-zbgTc</string>
+	<string>AIzaSyBbXfbny9EG56WMZGJwgZMMOQ2aQn8ca-E</string>
 	<key>GCM_SENDER_ID</key>
-	<string>374517092568</string>
+	<string>959603098432</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>org.reactjs.native.example.pigfood</string>
 	<key>PROJECT_ID</key>
-	<string>washcleanv2</string>
+	<string>pigfoods-db694</string>
 	<key>STORAGE_BUCKET</key>
-	<string>washcleanv2.appspot.com</string>
+	<string>pigfoods-db694.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:374517092568:ios:be74c1f7ce09088a</string>
+	<string>1:959603098432:ios:be74c1f7ce09088a</string>
 	<key>DATABASE_URL</key>
-	<string>https://washcleanv2.firebaseio.com</string>
+	<string>https://pigfoods-db694.firebaseio.com</string>
 </dict>
 </plist>
